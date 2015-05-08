@@ -1,17 +1,37 @@
 <ion-view view-title="Login" align-title="left">
-    <ion-content style="background: url(img/background.jpg) center; background-size: cover;">
+    <ion-content style="background: #8805A8 center; background-size: cover;">
         <div class="hero no-header flat">
             <div class="content">
                 <div class="app-icon"></div>
                 <h1 id="appTitle">GetTogether</h1>
             </div>
         </div>
+        <!--
         <div class="list">
+            
             <ion-md-input placeholder="Username" highlight-color="balanced" type="text"></ion-md-input>
             <ion-md-input placeholder="Password" highlight-color="energized" type="password"></ion-md-input>
+            
         </div>
+//-->
+
+        <md-content layout-padding>
+            <form name="userForm">
+                <div layout layout-sm="column">
+                    <md-input-container flex>
+                        <label>First name</label>
+                        <input ng-model="user.firstName">
+                    </md-input-container>
+                    <md-input-container flex>
+                        <label>Last Name</label>
+                        <input ng-model="theMax">
+                    </md-input-container>
+                </div>
+            </form>
+        </md-content>
+
         <div class="padding">
-            <button ui-sref="app.profile" class="button button-full button-assertive ink">Login</button>
+            <button style="background: #057D9E; color: #ffffff" ui-sref="app.profile" class="button button-full button ink">Login</button>
         </div>
         <div class="button-bar social-login">
             <button class="button button-small button-border icon-left ion-social-google button-assertive-900">Google+</button>
